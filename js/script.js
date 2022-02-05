@@ -8,9 +8,6 @@ const btn = document.querySelector(".posts__button");
 const btn2 = document.querySelector("add-post__button")
 const addPostTitle
 const p = document.querySelector(".posts__loader")
-const inputTitle = document.querySelector(".add-post__input");
-const addPostContent = document.querySelector(".add-post__content");
-const addPostButton = document.querySelector(".add-post__button");
 
 const getPostMarkup = (post) => {
     const postItem = document.createElement("li");
@@ -34,17 +31,6 @@ const getPostMarkup = (post) => {
 
     return postItem;
 };
-
-const checkForm = () => {
-    if (inputTitle.value == "" || addPostContent.value == "") {
-      if (addPostButton.hasAttribute("disabled")) {
-      } else {
-        addPostButton.setAttribute("disabled", "disabled");
-      }
-    } else {
-      addPostButton.removeAttribute("disabled");
-    }
-  };
 
 const fragment = new DocumentFragment();
 
